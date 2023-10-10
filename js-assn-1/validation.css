@@ -25,7 +25,7 @@ body{
     height:650px;
     width:50%;
     float: left;
-    background-image: url('https://c4.wallpaperflare.com/wallpaper/871/1013/108/minimalism-red-abstract-digital-art-wallpaper-preview.jpg'); 
+    background-image: url('./lib/Img/minimalism-red-art.jpg'); 
     background-repeat: no-repeat;
     background-size: cover;
 }
