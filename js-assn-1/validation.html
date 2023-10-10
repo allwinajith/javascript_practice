@@ -4,17 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Validation using javaScript</title>
+    <link rel="stylesheet" href="./validation.css">
 </head>
+
 <body>
-    <table>
-        <tr>
-            <td>First Name</td>
-            <input type="text" name="fName" id="fName">
-        </tr>
-        <tr>
-            <td>Last Name</td>
-            <input type="text" name="lName" id=lName">
-        </tr>
-    </table>
+<div id="total">
+    <div id="imgDiv"></div>
+    <div id="formDiv"> 
+    <article>
+        <h1>Sign Up</h1>
+        <form id="myForm" method="post" >
+            <p>
+            <label for="fName">First Name &nbsp;:</label>
+            <input type="text" name="fName" class="name" id="fName" placeholder="First Name" autocomplete="on" autofocus>
+            </p>
+
+            <p>
+            <label for="lName">Last Name &nbsp;:</label>
+            <input type="text" name="lName" class="name" id="lName" autocomplete="on" placeholder="Last Name">
+            </p>
+
+            <p>
+                <span><label>Gender &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label></span>
+                <span id="radioBtn">
+                <input type="radio" name="Gender" id="male" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" name="Gender" id="female" value="Female">
+                <label for="female">Female</label>
+            </span>
+            </p>
+
+            <p>
+            <label for="pNum">Phone &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+            <input type="tel" name="pNum" id="pNum" class="name" placeholder="333-333-3333" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+            </p>
+
+            <p>
+            <label for="eMail">email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+            <input type="email" name="eMail" id="eMail" autocomplete="on" placeholder="e-mail">
+            </p>
+
+            <p>
+                <label for="Pass">Password &nbsp;:</label>
+                <input type="password" class="name" name="password" id="pass" placeholder="password">
+            </p>
+           
+            <p>
+                <input type="submit" value="Sign Up" onClick="load(event)">
+            </p>
+        </form>
+    </article>
+   
+    </div>
+</div>
+<script src="./validation.js"></script>
 </body>
 </html>
+
+
