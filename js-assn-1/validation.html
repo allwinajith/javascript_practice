@@ -13,15 +13,16 @@
     <div id="formDiv"> 
     <article>
         <h1>Sign Up</h1>
-        <form id="myForm" method="post" >
+        <form id="myForm" onsubmit="return load(event)" method="post" >
             <p>
             <label for="fName">First Name &nbsp;:</label>
-            <input type="text" name="fName" class="name" id="fName" placeholder="First Name" autocomplete="on" autofocus>
+            <input type="text" name="fName" class="name" id="fName" maxlength="10" placeholder="First Name" autocomplete="on" autofocus>
+            <br><label class="test" id="testName">First Name is required</label>
             </p>
 
             <p>
             <label for="lName">Last Name &nbsp;:</label>
-            <input type="text" name="lName" class="name" id="lName" autocomplete="on" placeholder="Last Name">
+            <input type="text" name="lName" class="name" id="lName" maxlength="10" autocomplete="on" placeholder="Last Name">
             </p>
 
             <p>
@@ -36,12 +37,14 @@
 
             <p>
             <label for="pNum">Phone &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
-            <input type="tel" name="pNum" id="pNum" class="name" placeholder="333-333-3333" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+            <input type="tel" name="pNum" id="pNum" class="name" maxlength="10" placeholder="Mobile Number">
+            <br><label class="test" id="testPh">Phone Number is required</label>
             </p>
 
             <p>
             <label for="eMail">email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
             <input type="email" name="eMail" id="eMail" autocomplete="on" placeholder="e-mail">
+            <br><label class="test" id="testMail">email is required</label>
             </p>
 
             <p>
@@ -50,7 +53,7 @@
             </p>
            
             <p>
-                <input type="submit" value="Sign Up" onClick="load(event)">
+                <input type="submit" value="Sign Up">
             </p>
             
         </form>
